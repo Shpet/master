@@ -1,0 +1,29 @@
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+a {
+  transition: 0.25s;
+
+  &:hover {
+    color: $main;
+  }
+}
+
+.justify-center{
+  display: flex;
+  justify-content: center;
+}

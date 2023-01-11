@@ -1,0 +1,143 @@
+.main-slider__wrap {
+  margin-top: 75px;
+  position: relative;
+
+  .owl-carousel {
+    .slide {
+      max-height: 93vh;
+      height: 1080px;
+      width: 100%;
+      background-size: cover;
+      background-position: center center;
+
+      &1 {
+        background-image: url(../images/main-slider/1.jpeg);
+      }
+
+      &2 {
+        background-image: url(../images/main-slider/2.jpeg);
+      }
+
+      &3 {
+        background-image: url(../images/main-slider/3.jpeg);
+      }
+
+      &4 {
+        background-image: url(../images/main-slider/4.jpeg);
+      }
+
+      &5 {
+        background-image: url(../images/main-slider/5.jpeg);
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+  }
+
+  .main-slider__text {
+    position: absolute;
+    top: calc(50% - 225px);
+    right: 0;
+    left: 0;
+    z-index: 2;
+
+    margin: 0 auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 450px;
+    color: #fff;
+
+    h1 {
+      font-size: 100px;
+      color: $main;
+    }
+
+    h2 {
+      font-size: 45px;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      margin-top: auto;
+      padding: 25px 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border: 3px solid #fff;
+      font-size: 50px;
+      font-weight: bold;
+
+      &:hover {
+        color: $main;
+        border-color: $main;
+      }
+
+      &:active {
+        color: darken($main, 10%);
+        border-color: darken($main, 10%);
+      }
+    }
+  }
+
+  @media screen and(max-width: 1600px) {
+    .main-slider__text {
+      top: calc(50% - 165px);
+      height: 330px;
+
+      h1 {
+        font-size: 70px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+      .btn {
+        padding: 20px 60px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  @media screen and(max-width: 1200px) {
+    .main-slider__text {
+      top: calc(50% - 135px);
+      height: 270px;
+
+      h1 {
+        font-size: 50px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .btn {
+        border-width: 2px;
+        padding: 20px 50px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media screen and(max-width: 540px) {
+    .main-slider__text {
+      h1 {
+        font-size: 36px;
+      }
+    }
+  }
+}
